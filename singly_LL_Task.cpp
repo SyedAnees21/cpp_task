@@ -8,7 +8,7 @@ struct Node {
 
 struct Node* head = NULL;
 
-void insert_thread1(int new_data) {
+void push(int new_data) {
    
    Node *new_node;
    new_node = new Node;
@@ -17,14 +17,6 @@ void insert_thread1(int new_data) {
    head = new_node;
 }
 
-void insert_thread2(int new_data) {
-   
-   Node *new_node;
-   new_node = new Node;
-   new_node->data = new_data;
-   new_node->next = head;
-   head = new_node;
-}
 
 void display() {
    
@@ -37,11 +29,11 @@ void display() {
 }
 
 int main() {
-   insert_thread1(3);
-   insert_thread1(1);
-   insert_thread1(7);
-   insert_thread1(2);
-   insert_thread1(9);
+   push(3);
+   push(1);
+   push(7);
+   push(2);
+   push(9);
    cout<<"The linked list is: ";
    display();
    return 0;
